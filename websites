@@ -2,3 +2,6 @@ https://www.bigdatahush.com/tensor-flow
 
 
 https://www.tensorflow.org/programmers_guide/tensorboard_histograms
+
+
+tensorboard --logdir=mylogs:C:\Users\hlshe\Downloads\presentation
