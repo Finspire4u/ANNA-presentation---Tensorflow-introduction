@@ -17,7 +17,7 @@ l1 = add_layer(xs, 1, 10, activation_function=tf.nn.relu)
 prediction = add_layer(l1, 10, 1, activation_function=None)
 
 loss = tf.reduce_mean(tf.reduce_sum(tf.square(ys - prediction), reduction_indices=[1]))
-train = tf.train.GradientDescentOptimizer(0.3).minimize(loss)
+train = tf.train.GradientDescentOptimizer(0.1).minimize(loss)
 
 fig = plt.figure()
 ax = fig.add_subplot(1,1,1)
@@ -28,7 +28,7 @@ plt.show()
 init = tf.global_variables_initializer()
 with tf.Session() as sess:
     sess.run(init)
-    for i in range(1001):
+    for i in range(2001):
         sess.run(train, feed_dict={xs: x_data, ys: y_data})
         if i % 50 == 0:
             #print(sess.run(loss, feed_dict={xs: x_data, ys: y_data}))
