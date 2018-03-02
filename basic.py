@@ -1,7 +1,7 @@
 """
 Linsheng He 113428893 TensorFlow data visualization
 
-Basic, Weights, biases, loss, Session
+Basic: Weights, biases, loss, Session
 
 """
 from __future__ import print_function
@@ -16,8 +16,8 @@ y_data = x_data*0.1 + 0.3
 
 ######### create tensorflow structure #########
 #use random uniform to create this 1-D Variable
-Weights = tf.Variable(tf.random_uniform([1], -1.0, 1.0))
-biases = tf.Variable(tf.zeros([1]))
+Weights = tf.Variable(tf.random_uniform([1], -10.0, 10.0))
+biases = tf.Variable(tf.random_uniform([1],-10.0,10.0))
 # it will learn to improve initialized value to an more accurate level
 y = Weights*x_data + biases
 # calculate the error between y and y_data
